@@ -10,7 +10,9 @@ Requires the Maximind Geolite2-City.mmdb file in order to geolocate the user.
 This can be done on Windows as well.
 
 Argument 1 points to the Geolite2-City.mmdb file
+
 Argument 2 points towards your local IP on your interface being used.
+
 Argument 3 points towards your internet adapter being used.
 
 ## DO NOT USE MY CODE FOR MALICIOUS PURPOSES
