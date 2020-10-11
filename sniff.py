@@ -6,8 +6,9 @@ import geoip2.database
 
 #georeader = geoip2.database.Reader(geodata)
 stunxor = ' 01 01 00 2C ' # Omegle appeared to have a consistant set of hex bytes during its STUN negotiations.
-geodb = sys.argv[1]
-localip = str(sys.argv[2])
+geodb = sys.argv[1] # Argument 1 points to the Geolite2-City.mmdb file
+localip = str(sys.argv[2]) # Argument 2 points towards your local IP on your interface being used.
+adapter = sys.argv[3] # Argument 3 points towards your internet adapter being used.
 
 def print_summary(pkt):
 	try:
@@ -31,4 +32,4 @@ Subdivision: {geodata.subdivisions.most_specific.name}
 	except:
 		pass
 with geoip2.database.Reader(geodb) as reader:
-	sniff(filter=f"src not {localip} and udp and host {localip}", prn=print_summary, iface='Ethernet')
+	sniff(filter=f"src not {localip} and udp and host {localip}", prn=print_summary, iface=adapter)
