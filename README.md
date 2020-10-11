@@ -4,7 +4,7 @@ This tool uses scapy and a local Maximind db to sniff for IPs over Omegle via th
 
 Requires the Maximind Geolite2-City.mmdb file in order to geolocate the user.
 
-#Usage
+# Usage
 
 `python sniff.py /path/to/Geolite2-City.mmdb 192.168.1.2 eth0`
 This can be done on Windows as well.
